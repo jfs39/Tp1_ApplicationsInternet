@@ -125,9 +125,9 @@ class ProductsController extends AppController
         return false;
     }
 
+    // Check that the article belongs to the current user.
     $produit = $this->Products->findBySlug($slug)->first();
 
     return $produit->user_id === $user['id'];
 }
-
 }

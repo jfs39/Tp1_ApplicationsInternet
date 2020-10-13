@@ -105,6 +105,7 @@ class FeaturesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
     public function isAuthorized($user)
 {
     $action = $this->request->getParam('action');
@@ -120,8 +121,8 @@ class FeaturesController extends AppController
     }
 
     // Check that the article belongs to the current user.
-    $article = $this->Articles->findBySlug($slug)->first();
+    $caract = $this->Features->findBySlug($slug)->first();
 
-    return $article->user_id === $user['id'];
+    return $caract->user_id === $user['id'];
 }
 }

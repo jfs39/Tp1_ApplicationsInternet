@@ -56,3 +56,4 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </footer>
 </body>
 </html>
+<?= $this->Flash->render() ?>
