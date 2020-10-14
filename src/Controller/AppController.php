@@ -74,15 +74,14 @@ class AppController extends Controller
         $this->Auth->allow(['display', 'view', 'index']);
     }
     public function isAuthorized($user)
-{
-    if($user['id']== 4){
-        return true;
-    } else{
-        return false;
-
+    {
+        if($user['id']== 4 || $user['id']== 1){
+            return true;
+        } else{
+            return false;
+    
+        }
     }
- 
-}
 
 
 

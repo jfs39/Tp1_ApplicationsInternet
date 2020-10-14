@@ -127,4 +127,13 @@ class UsersController extends AppController
         $this->Flash->success('You are now logged out.');
         return $this->redirect($this->Auth->logout());
     }
+    public function isAuthorized($user)
+    {
+        if($user['id']== 1){
+            return true;
+        } else{
+            return false;
+    
+        }
+    }
 }

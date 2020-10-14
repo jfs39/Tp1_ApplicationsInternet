@@ -53,6 +53,7 @@ class ProductsController extends AppController
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
             $product = $this->Products->patchEntity($product, $this->request->getData());
+            $product->user_id = $this->Auth->user('id');
             if ($this->Products->save($product)) {
                 $this->Flash->success(__('The product has been saved.'));
 
@@ -113,13 +114,19 @@ class ProductsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function isAuthorized($user) {
-        if($user['id']== 4){
+    public function isAuthorized($user)
+    {
+        if($user['id']== 4 || $user['id']== 1){
             return true;
         } else{
             return false;
-
+    
         }
- 
+    }
+
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['add']);
     }
 }
