@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+use function PHPSTORM_META\type;
+
 /**
  * Users Controller
  *
@@ -127,6 +129,7 @@ class UsersController extends AppController
         $this->Flash->success('You are now logged out.');
         return $this->redirect($this->Auth->logout());
     }
+
     public function isAuthorized($user)
     {
         if($user['id']== 1){
