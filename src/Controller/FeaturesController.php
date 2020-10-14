@@ -108,21 +108,12 @@ class FeaturesController extends AppController
 
     public function isAuthorized($user)
 {
-    $action = $this->request->getParam('action');
-    // The add and tags actions are always allowed to logged in users.
-    if (in_array($action, ['add', 'tags'])) {
+    if($user['id']== 4){
         return true;
-    }
-
-    // All other actions require a slug.
-    $slug = $this->request->getParam('pass.0');
-    if (!$slug) {
+    } else{
         return false;
+
     }
-
-    // Check that the article belongs to the current user.
-    $caract = $this->Features->findBySlug($slug)->first();
-
-    return $caract->user_id === $user['id'];
+ 
 }
 }

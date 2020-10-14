@@ -75,7 +75,7 @@ class AppController extends Controller
     }
     public function isAuthorized($user)
 {
-    if($user['id']==1){
+    if($user['id']== 4){
         return true;
     } else{
         return false;

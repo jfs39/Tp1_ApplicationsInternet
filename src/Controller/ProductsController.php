@@ -72,6 +72,8 @@ class ProductsController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
+
+
     public function edit($id = null)
     {
         $product = $this->Products->get($id, [
@@ -111,23 +113,13 @@ class ProductsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function isAuthorized($user)
-{
-    $action = $this->request->getParam('action');
-    // The add and tags actions are always allowed to logged in users.
-    if (in_array($action, ['add', 'tags'])) {
-        return true;
+    public function isAuthorized($user) {
+        if($user['id']== 4){
+            return true;
+        } else{
+            return false;
+
+        }
+ 
     }
-
-    // All other actions require a slug.
-    $slug = $this->request->getParam('pass.0');
-    if (!$slug) {
-        return false;
-    }
-
-    // Check that the article belongs to the current user.
-    $produit = $this->Products->findBySlug($slug)->first();
-
-    return $produit->user_id === $user['id'];
-}
 }

@@ -23,7 +23,6 @@
             echo $this->Form->control('product_description');
             echo $this->Form->control('price');
             echo $this->Form->control('other_details');
-            echo $this->Form->control('user_id', ['options' => $users]);
             echo $this->Form->control('features._ids', ['options' => $features]);
         ?>
     </fieldset>
