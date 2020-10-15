@@ -1,0 +1,326 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-10-15 15:13+0000\n"
+"PO-Revision-Date: 2020-10-15 11:29-0400\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Language: fr_CA\n"
+
+#: Controller/FeaturesController.php:54 Controller/FeaturesController.php:79
+msgid "The feature has been saved."
+msgstr "Cette caractéristique a été sauvegardée"
+
+#: Controller/FeaturesController.php:58 Controller/FeaturesController.php:83
+msgid "The feature could not be saved. Please, try again."
+msgstr "Cette caractéristique n'a pas été sauvegardée. Réessayez."
+
+#: Controller/FeaturesController.php:101
+msgid "The feature has been deleted."
+msgstr "Cette caractéristique a été supprimée."
+
+#: Controller/FeaturesController.php:103
+msgid "The feature could not be deleted. Please, try again."
+msgstr "Cette caractéristique n'a pas pu être supprimée. Réessayez."
+
+#: Controller/FeaturesProductsController.php:57
+#: Controller/FeaturesProductsController.php:83
+msgid "The features product has been saved."
+msgstr "Cette caractéristique a été assignée à un produit."
+
+#: Controller/FeaturesProductsController.php:61
+#: Controller/FeaturesProductsController.php:87
+msgid "The features product could not be saved. Please, try again."
+msgstr "Cette caractéristique n'a pas été assignée à un produit. Réessayez."
+
+#: Controller/FeaturesProductsController.php:106
+msgid "The features product has been deleted."
+msgstr "Cette assignation a été supprimée."
+
+#: Controller/FeaturesProductsController.php:108
+msgid "The features product could not be deleted. Please, try again."
+msgstr ""
+"Cette assignation d'une caractéristique à un produit n'a pas pu être "
+"supprimée. Réessayez."
+
+#: Controller/ProductsController.php:58 Controller/ProductsController.php:86
+msgid "The product has been saved."
+msgstr "Ce produit a été sauvegardé."
+
+#: Controller/ProductsController.php:62 Controller/ProductsController.php:90
+msgid "The product could not be saved. Please, try again."
+msgstr "Ce produit n'a pas pu être sauvegardé. Réessayez."
+
+#: Controller/ProductsController.php:109
+msgid "The product has been deleted."
+msgstr "Ce produit a été supprimé."
+
+#: Controller/ProductsController.php:111
+msgid "The product could not be deleted. Please, try again."
+msgstr "Ce produit n'a pas pu être supprimé. Réessayez."
+
+#: Controller/UsersController.php:56 Controller/UsersController.php:80
+msgid "The user has been saved."
+msgstr "Votre utilisateur a été sauvegardé."
+
+#: Controller/UsersController.php:60 Controller/UsersController.php:84
+msgid "The user could not be saved. Please, try again."
+msgstr "Votre utilisateur n'a pas pu être sauvegardé. Réessayez."
+
+#: Controller/UsersController.php:101
+msgid "The user has been deleted."
+msgstr "Votre utilisateur a été supprimé."
+
+#: Controller/UsersController.php:103
+msgid "The user could not be deleted. Please, try again."
+msgstr "Cet utilisateur n'a pas pu être supprimé. Réessayez."
+
+#: Template/Features/add.ctp:9 Template/Features/edit.ctp:9
+#: Template/Features/index.ctp:9 Template/Features/index.ctp:25
+#: Template/Features/view.ctp:9 Template/Features/view.ctp:49
+#: Template/Products/add.ctp:9 Template/Products/edit.ctp:9
+#: Template/Products/index.ctp:9 Template/Products/index.ctp:26
+#: Template/Products/view.ctp:9 Template/Products/view.ctp:57
+#: Template/Users/add.ctp:9 Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:9 Template/Users/index.ctp:25
+#: Template/Users/view.ctp:9 Template/Users/view.ctp:49
+msgid "Actions"
+msgstr ""
+
+#: Template/Features/add.ctp:10 Template/Features/edit.ctp:16
+#: Template/Features/index.ctp:13 Template/Features/view.ctp:12
+#: Template/Products/add.ctp:13 Template/Products/edit.ctp:19
+#: Template/Products/index.ctp:13 Template/Products/view.ctp:16
+#: Template/Users/index.ctp:13
+msgid "List Features"
+msgstr "Liste de Caractéristiques"
+
+#: Template/Features/add.ctp:11 Template/Features/edit.ctp:17
+#: Template/Features/view.ctp:14 Template/Products/edit.ctp:16
+#: Template/Products/view.ctp:12 Template/Users/add.ctp:11
+#: Template/Users/edit.ctp:17 Template/Users/view.ctp:14
+msgid "List Products"
+msgstr "Liste de Produits"
+
+#: Template/Features/add.ctp:12 Template/Features/edit.ctp:18
+#: Template/Features/index.ctp:10 Template/Features/view.ctp:15
+#: Template/Products/add.ctp:10 Template/Products/index.ctp:10
+#: Template/Products/view.ctp:13 Template/Users/add.ctp:12
+#: Template/Users/edit.ctp:18 Template/Users/index.ctp:10
+#: Template/Users/view.ctp:15
+msgid "New Product"
+msgstr "Nouveau Produit"
+
+#: Template/Features/add.ctp:18
+msgid "Add Feature"
+msgstr "Ajoutez une Caractéristique"
+
+#: Template/Features/add.ctp:26 Template/Features/edit.ctp:32
+#: Template/Products/add.ctp:29 Template/Products/edit.ctp:36
+#: Template/Users/add.ctp:26 Template/Users/edit.ctp:31
+msgid "Submit"
+msgstr "Soumettre"
+
+#: Template/Features/edit.ctp:11 Template/Features/index.ctp:37
+#: Template/Features/view.ctp:62 Template/Products/edit.ctp:11
+#: Template/Products/index.ctp:39 Template/Products/view.ctp:68
+#: Template/Users/edit.ctp:11 Template/Users/index.ctp:37
+#: Template/Users/view.ctp:62
+msgid "Delete"
+msgstr "Supprimer"
+
+#: Template/Features/edit.ctp:13 Template/Features/index.ctp:37
+#: Template/Features/view.ctp:11 Template/Features/view.ctp:62
+#: Template/Products/edit.ctp:13 Template/Products/index.ctp:39
+#: Template/Products/view.ctp:11 Template/Products/view.ctp:68
+#: Template/Users/edit.ctp:13 Template/Users/index.ctp:37
+#: Template/Users/view.ctp:11 Template/Users/view.ctp:62
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Features/edit.ctp:24 Template/Features/view.ctp:10
+msgid "Edit Feature"
+msgstr "Modifiez une Caractéristique"
+
+#: Template/Features/index.ctp:11 Template/Products/add.ctp:11
+#: Template/Products/edit.ctp:17 Template/Products/index.ctp:11
+#: Template/Products/view.ctp:14 Template/Users/add.ctp:10
+#: Template/Users/edit.ctp:16 Template/Users/index.ctp:11
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr "Liste des Utilisateurs"
+
+#: Template/Features/index.ctp:12 Template/Products/add.ctp:12
+#: Template/Products/edit.ctp:18 Template/Products/index.ctp:12
+#: Template/Products/view.ctp:15 Template/Users/index.ctp:12
+#: Template/Users/view.ctp:13
+msgid "New User"
+msgstr "Nouvel Utilisateur"
+
+#: Template/Features/index.ctp:14 Template/Features/view.ctp:13
+#: Template/Products/add.ctp:14 Template/Products/edit.ctp:20
+#: Template/Products/index.ctp:14 Template/Products/view.ctp:17
+#: Template/Users/index.ctp:14
+msgid "New Feature"
+msgstr "Nouvelle Caractéristique"
+
+#: Template/Features/index.ctp:18
+msgid "Features"
+msgstr "Caractéristiques"
+
+#: Template/Features/index.ctp:35 Template/Features/view.ctp:60
+#: Template/Products/index.ctp:37 Template/Products/view.ctp:66
+#: Template/Users/index.ctp:35 Template/Users/view.ctp:60
+msgid "View"
+msgstr "Voir"
+
+#: Template/Features/index.ctp:36 Template/Features/view.ctp:61
+#: Template/Products/index.ctp:38 Template/Products/view.ctp:67
+#: Template/Users/index.ctp:36 Template/Users/view.ctp:61
+msgid "Edit"
+msgstr "Éditer"
+
+#: Template/Features/index.ctp:45 Template/Products/index.ctp:47
+#: Template/Users/index.ctp:45
+msgid "first"
+msgstr ""
+
+#: Template/Features/index.ctp:46 Template/Products/index.ctp:48
+#: Template/Users/index.ctp:46
+msgid "previous"
+msgstr "précédent"
+
+#: Template/Features/index.ctp:48 Template/Products/index.ctp:50
+#: Template/Users/index.ctp:48
+msgid "next"
+msgstr "prochain"
+
+#: Template/Features/index.ctp:49 Template/Products/index.ctp:51
+#: Template/Users/index.ctp:49
+msgid "last"
+msgstr "dernier"
+
+#: Template/Features/index.ctp:51 Template/Products/index.ctp:53
+#: Template/Users/index.ctp:51
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+
+#: Template/Features/view.ctp:11
+msgid "Delete Feature"
+msgstr "Supprimer une caractéristique"
+
+#: Template/Features/view.ctp:22 Template/Products/view.ctp:54
+msgid "Feature Name"
+msgstr "Nom de Caractéristique"
+
+#: Template/Features/view.ctp:26 Template/Products/view.ctp:56
+msgid "Feature Data Type"
+msgstr "Type de données"
+
+#: Template/Features/view.ctp:30 Template/Features/view.ctp:43
+#: Template/Products/view.ctp:32 Template/Products/view.ctp:53
+#: Template/Users/view.ctp:34 Template/Users/view.ctp:43
+msgid "Id"
+msgstr ""
+
+#: Template/Features/view.ctp:35 Template/Products/view.ctp:55
+msgid "Feature Details"
+msgstr "Détails de Caractéristique"
+
+#: Template/Features/view.ctp:39 Template/Users/view.ctp:39
+msgid "Related Products"
+msgstr "Produits reliés"
+
+#: Template/Features/view.ctp:44 Template/Products/view.ctp:24
+#: Template/Users/view.ctp:44
+msgid "Product Name"
+msgstr "Nom de Produit"
+
+#: Template/Features/view.ctp:45 Template/Products/view.ctp:41
+#: Template/Users/view.ctp:45
+msgid "Product Description"
+msgstr "Description du Produit"
+
+#: Template/Features/view.ctp:46 Template/Products/view.ctp:36
+#: Template/Users/view.ctp:46
+msgid "Price"
+msgstr "Prix"
+
+#: Template/Features/view.ctp:47 Template/Products/view.ctp:45
+#: Template/Users/view.ctp:47
+msgid "Other Details"
+msgstr "Autres Détails"
+
+#: Template/Features/view.ctp:48 Template/Users/view.ctp:48
+msgid "User Id"
+msgstr ""
+
+#: Template/Layout/error.ctp:36
+msgid "Error"
+msgstr "Erreur"
+
+#: Template/Layout/error.ctp:44
+msgid "Back"
+msgstr "Retour"
+
+#: Template/Products/add.ctp:20
+msgid "Add Product"
+msgstr "Ajouter un Produit"
+
+#: Template/Products/edit.ctp:26 Template/Products/view.ctp:10
+msgid "Edit Product"
+msgstr "Éditer un Produit"
+
+#: Template/Products/index.ctp:18
+msgid "Products"
+msgstr "Produits"
+
+#: Template/Products/view.ctp:11
+msgid "Delete Product"
+msgstr "Supprimer un Produit"
+
+#: Template/Products/view.ctp:28
+msgid "User"
+msgstr "Utilisateur"
+
+#: Template/Products/view.ctp:49
+msgid "Related Features"
+msgstr "Caractéristiques reliées"
+
+#: Template/Users/add.ctp:18
+msgid "Add User"
+msgstr "Ajouter un Utilisateur"
+
+#: Template/Users/edit.ctp:24 Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr "Éditer un Utilisateur"
+
+#: Template/Users/index.ctp:18
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr "Supprimer un Utilisateur"
+
+#: Template/Users/view.ctp:22
+msgid "Username"
+msgstr "Nom d'Utilisateur"
+
+#: Template/Users/view.ctp:26
+msgid "Email"
+msgstr "Email"
+
+#: Template/Users/view.ctp:30
+msgid "Password"
+msgstr "Mot de Passe"
