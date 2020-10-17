@@ -46,6 +46,23 @@
         <?= $this->Text->autoParagraph(h($product->other_details)); ?>
     </div>
     <div class="related">
+        <h4><?= __('Related Files') ?></h4>
+        <?php if (!empty($product->files)): ?>
+            <table cellpadding="0" cellspacing="0">
+                <?php foreach ($product->files as $files): ?>
+                    <tr>
+                        <td>    
+                            <?php
+                            echo $this->Html->image($files->path . $files->name, [
+                                "alt" => $files->name,
+                            ]);
+                            ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        <?php endif; ?>
+    </div>
+    <div class="related">
         <h4><?= __('Related Features') ?></h4>
         <?php if (!empty($product->features)): ?>
         <table cellpadding="0" cellspacing="0">

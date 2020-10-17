@@ -23,6 +23,7 @@
                 <th scope="col"><?= $this->Paginator->sort('product_name') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('price') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('user_username') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('files') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
@@ -33,6 +34,17 @@
                 <td><?= h($product->product_name) ?></td>
                 <td><?= $this->Number->format($product->price) ?></td>
                 <td><?= $product->has('user') ? $this->Html->link($product->user->username, ['controller' => 'Users', 'action' => 'view', $product->user->id]) : '' ?></td>
+                <td><?php
+                        if (isset($product->files[0])) {
+                            echo $this->Html->image($product->files[0]->path . $product->files[0]->name, [
+                                "alt" => $product->files[0]->name,
+                                "width" => "220px",
+                                "height" => "150px",
+                                'url' => ['controller' => 'Files', 'action' => 'view', $product->files[0]->id]
+                            ]);
+                        }
+                        ?>
+                    </td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>

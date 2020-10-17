@@ -32,6 +32,7 @@ class ProductsTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
+        $this->addBehavior('Translate', ['fields' => ['title','product_description','product_name']]);
 
         $this->setTable('products');
         $this->setDisplayField('id');
@@ -45,6 +46,12 @@ class ProductsTable extends Table
             'foreignKey' => 'product_id',
             'targetForeignKey' => 'feature_id',
             'joinTable' => 'features_products',
+        ]);
+
+        $this->belongsToMany('Files', [
+            'foreignKey' => 'product_id',
+            'targetForeignKey' => 'file_id',
+            'joinTable' => 'files_products',
         ]);
     }
 

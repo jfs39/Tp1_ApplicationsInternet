@@ -24,6 +24,7 @@
             echo $this->Form->control('price');
             echo $this->Form->control('other_details');
             echo $this->Form->control('features._ids', ['options' => $features]);
+            echo $this->Form->control('files._ids', ['options' => $files]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

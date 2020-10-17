@@ -58,6 +58,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <li><?= $this->Html->link('Deutch', ['action' => 'changeLang', 'de_DE'], ['escape' => false]) ?></li>
                 <li><a target="_blank" href="https://book.cakephp.org/3/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
+                <li><?= $this->Html->link(__('About me'), ['controller' => 'Users', 'action' => 'apropos']) ?></li>
             </ul>
         </div>
     </nav>

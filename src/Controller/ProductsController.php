@@ -20,7 +20,7 @@ class ProductsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users'],
+            'contain' => ['Users','Files'],
         ];
         $products = $this->paginate($this->Products);
 
@@ -37,7 +37,7 @@ class ProductsController extends AppController
     public function view($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Users', 'Features'],
+            'contain' => ['Users', 'Features','Files'],
         ]);
 
         $this->set('product', $product);
@@ -63,7 +63,8 @@ class ProductsController extends AppController
         }
         $users = $this->Products->Users->find('list', ['limit' => 200]);
         $features = $this->Products->Features->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'users', 'features'));
+        $files = $this->Products->Files->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'users', 'features','files'));
     }
 
     /**
@@ -91,7 +92,8 @@ class ProductsController extends AppController
         }
         $users = $this->Products->Users->find('list', ['limit' => 200]);
         $features = $this->Products->Features->find('list', ['limit' => 200]);
-        $this->set(compact('product', 'users', 'features'));
+        $files = $this->Products->Files->find('list', ['limit' => 200]);
+        $this->set(compact('product', 'users', 'features','files'));
     }
 
     /**
