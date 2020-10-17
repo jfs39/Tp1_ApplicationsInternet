@@ -35,6 +35,6 @@ class Product extends Entity
         'user_id' => true,
         'user' => true,
         'features' => true,
-        'file' => true
+        'files' => true
     ];
 }
