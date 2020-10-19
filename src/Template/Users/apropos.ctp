@@ -10,4 +10,4 @@
 <br/>
 <p> Voici des photos de ma base de données:</p>
 
-<img src="../../../webroot/img/bd.PNG">
+<img src="/Tp1_JeanFrancoisSergerie/img/BD.png"/>

@@ -2,8 +2,9 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Utility\Text;
+use Cake\Mailer\Email;
 
-use function PHPSTORM_META\type;
 
 /**
  * Users Controller
@@ -41,6 +42,23 @@ class UsersController extends AppController
 
         $this->set('user', $user);
     }
+    
+
+    public function envoyerEmailConfirmation($user){
+        $email = new Email('default');
+        $email->to($user->email)->subject(__('Confirm your email'))->send('http://' . $_SERVER['HTTP_HOST'] . $this->request->webroot . 'users/confirm/' . $user->uuid);
+    }
+
+    public function confirm($uuid){
+        $user = $this->Users->findByUuid($uuid)->firstOrFail();
+        $user->active = true;
+        if($this->Users->save($user)){
+            $this->Flash->success(__('Thank you') . ' . '. __('Your email has been confirmed'));
+            $this->redirect(['action'=>'index']);
+        } else {
+            $this->Flash->error(__('There was a problem with your email confirmation. Please try again'));
+        }
+    }
 
     /**
      * Add method
@@ -52,9 +70,12 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
+            $user->uuid = Text::uuid();
+            $user->active = false;
+            $user->role = 'user';
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-
+                $this->envoyerEmailConfirmation($user);
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The user could not be saved. Please, try again.'));
@@ -127,7 +148,7 @@ class UsersController extends AppController
     public function initialize()
     {
         parent::initialize();
-        $this->Auth->allow(['logout','add']);
+        $this->Auth->allow(['logout','add','confirm','apropos']);
     }
 
     public function logout()
@@ -138,7 +159,8 @@ class UsersController extends AppController
 
     public function isAuthorized($user)
     {
-        if($user['id']== 1){
+    
+        if($user['role'] == 'admin'){
             return true;
         } else{
             return false;

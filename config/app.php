@@ -205,23 +205,33 @@ return [
      */
     'EmailTransport' => [
         'default' => [
-            'className' => MailTransport::class,
+           'className' => MailTransport::class,
             /*
-             * The keys host, port, timeout, username, password, client and tls
-             * are used in SMTP transports
+             * The following keys are used in SMTP transports:
              */
             'host' => 'localhost',
-            'port' => 25,
+           'port' => 25,
             'timeout' => 30,
-            /*
-             * It is recommended to set these options through your environment or app_local.php
-             */
-            //'username' => null,
-            //'password' => null,
+           'username' => null,
+            'password' => null,
             'client' => null,
-            'tls' => false,
+            'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
-        ],
+          ],
+      //  'davmail' => [
+     //       'host' => 'localhost',
+     //       'port' => 1025,
+     //       'username' => '',
+     //       'password' => '',
+     //       'className' => 'Smtp'
+      //  ],
+        'gmail' => [
+            'host' => 'ssl://smtp.gmail.com',
+            'port' => 465,
+            'username' => 'jfs0802@gmail.com',
+            'password' => 'pcrtxmjwzriesvnc',
+            'className' => 'Smtp'
+        ]
     ],
 
     /*
@@ -235,7 +245,7 @@ return [
      */
     'Email' => [
         'default' => [
-            'transport' => 'default',
+            'transport' => 'gmail',
             'from' => 'you@localhost',
             /*
              * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.
