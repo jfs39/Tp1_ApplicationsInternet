@@ -108,9 +108,9 @@ class FeaturesController extends AppController
 
     public function isAuthorized($user)
     {
-        if($user['id']== 4 || $user['id']== 1){
+        if($user['role']== 'admin' || $user['role']== 'user'){
             return true;
-        } else{
+        } else {
             return false;
     
         }

@@ -122,4 +122,14 @@ class FilesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function isAuthorized($user)
+    {
+        if($user['role']== 'admin' || $user['role']== 'user'){
+            return true;
+        } else {
+            return false;
+    
+        }
+    }
 }

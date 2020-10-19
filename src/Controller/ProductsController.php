@@ -120,7 +120,7 @@ class ProductsController extends AppController
     {
         if($user['role']== 'admin' || $user['role']== 'user'){
             return true;
-        } else{
+        } else {
             return false;
     
         }
