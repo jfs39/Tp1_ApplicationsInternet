@@ -3,7 +3,18 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Product $product
  */
+
+use function PHPSTORM_META\type;
+
+$urlToProductAutocompletedemoJson = $this->Url->build([
+    "controller" => "Products",
+    "action" => "findProductNames",
+    "_ext" => "json"
+        ]);
+        echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToProductAutocompletedemoJson . '";', ['block' => true]);
+        echo $this->Html->script('Products/add-edit/productsAutoComplete', ['block' => 'scriptBottom']);
 ?>
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -19,7 +30,8 @@
     <fieldset>
         <legend><?= __('Add Product') ?></legend>
         <?php
-            echo $this->Form->control('product_name');
+            echo $this->Form->control('product_name', ['type' => 'text', 'id'=> 'autocomplete']);
+            //echo $this->Form->control('obec_city_id', ['label' => __('City') . ' (' . __('Autocomplete demo') . ')', 'type' => 'text', 'id' => 'autocomplete']);
             echo $this->Form->control('product_description');
             echo $this->Form->control('price');
             echo $this->Form->control('other_details');

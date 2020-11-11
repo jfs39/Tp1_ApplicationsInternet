@@ -8,6 +8,9 @@
  quand je change la langue pour le Francais ou l'Allemand.</p>
 
 <br/>
+
+<p>Pour utiliser le compte admin, le nom d'utilisateur est : admin@admin.com</p>
+<p>Le mot de passe est: admin</p>
 <p> Voici des photos de ma base de données:</p>
 
 <img src="/Tp1_JeanFrancoisSergerie/img/BD.png"/>

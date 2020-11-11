@@ -116,6 +116,23 @@ class ProductsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+    public function findProductNames(){
+        if ($this->request->is('ajax')) {
+
+            $this->autoRender = false;
+            $name = $this->request->query['term'];
+            $results = $this->Products->find('all', array(
+                'conditions' => array('Products.product_name LIKE ' => '%' . $name . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result) {
+                $resultArr[] = array('label' => $result['product_name'], 'value' => $result['product_name']);
+            }
+            echo json_encode($resultArr);
+        }
+    }
+
     public function isAuthorized($user)
     {
         if($user['role']== 'admin' || $user['role']== 'user'){
@@ -129,5 +146,6 @@ class ProductsController extends AppController
     public function initialize()
     {
         parent::initialize();
+       // $this->Auth->allow(['findProductNames']);
     }
 }
