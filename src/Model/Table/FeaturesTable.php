@@ -41,6 +41,12 @@ class FeaturesTable extends Table
             'targetForeignKey' => 'product_id',
             'joinTable' => 'features_products',
         ]);
+        $this->belongsTo('Colors', [
+            'foreignKey' => 'feature_data_type',
+        ]);
+        $this->belongsTo('Shapes', [
+            'foreignKey' => 'feature_data_type',
+        ]);
     }
 
     /**

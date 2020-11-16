@@ -40,6 +40,17 @@ class FeaturesController extends AppController
         $this->set('feature', $feature);
     }
 
+   // public function getByShapeOrColor() {
+      //  $feature_id = $this->request->query('feature_data_type');
+    //    $feature_type =
+
+      //  $shapes = $this->Shapes->find('all', [
+     //       'conditions' => ['OkresCounties.kraj_region_id' => $feature_id],
+      //  ]);
+      //  $this->set('okresCounties', $shapes);
+      //  $this->set('_serialize', ['okresCounties']);
+  //  }
+
     /**
      * Add method
      *
@@ -58,7 +69,10 @@ class FeaturesController extends AppController
             $this->Flash->error(__('The feature could not be saved. Please, try again.'));
         }
         $products = $this->Features->Products->find('list', ['limit' => 200]);
-        $this->set(compact('feature', 'products'));
+        $colors = $this->Features->Colors->find('list', ['limit' => 200]);
+        $shapes = $this->Features->Shapes->find('list', ['limit' => 200]);
+        $data_Types = ['Colors', 'Shapes'];
+        $this->set(compact('feature', 'products','colors','shapes','data_Types'));
     }
 
     /**

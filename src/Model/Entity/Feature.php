@@ -29,5 +29,7 @@ class Feature extends Entity
         'feature_details' => true,
         'feature_data_type' => true,
         'products' => true,
+        'shapes' => true,
+        'colors' => true,
     ];
 }

@@ -23,9 +23,9 @@
     <fieldset>
         <legend><?= __('Edit Feature') ?></legend>
         <?php
+            echo $this->Form->control('feature_data_type');
             echo $this->Form->control('feature_name');
             echo $this->Form->control('feature_details');
-            echo $this->Form->control('feature_data_type');
             echo $this->Form->control('products._ids', ['options' => $products]);
         ?>
     </fieldset>

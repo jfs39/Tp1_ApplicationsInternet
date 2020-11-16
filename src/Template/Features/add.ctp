@@ -3,6 +3,14 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Feature $feature
  */
+
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Features",
+    "action" => "getByDataType",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Features/add_edit', ['block' => 'scriptBottom']);
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -17,9 +25,11 @@
     <fieldset>
         <legend><?= __('Add Feature') ?></legend>
         <?php
+            //echo $this->Form->control('feature_data_type',['options' => $data_Types]);/*,['options' => $data_Types]*/
+            echo $this->Form->control('feature_data_type');/*,['options' => $data_Types]*/
+            //echo $this->Form->control('feature_name', ['options' => [__('Please select a data type first')]]);
             echo $this->Form->control('feature_name');
             echo $this->Form->control('feature_details');
-            echo $this->Form->control('feature_data_type');
             echo $this->Form->control('products._ids', ['options' => $products]);
         ?>
     </fieldset>
