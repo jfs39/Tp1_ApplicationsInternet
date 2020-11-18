@@ -22,6 +22,17 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+Router::prefix('api', function ($routes) {
+    $routes->extensions(['json', 'xml']);
+    $routes->resources('Products');
+});
+
+Router::prefix('admin', function (RouteBuilder $routes) {
+    // Toutes les routes ici seront préfixées avec `/admin` et auront
+    // l'élément de route prefix => admin ajouté.
+    $routes->fallbacks(DashedRoute::class);
+});
+
 Router::extensions(['json','xml']);
 
 /*
@@ -49,15 +60,16 @@ Router::defaultRouteClass(DashedRoute::class);
 
 Router::scope('/', function (RouteBuilder $routes) {
     // Register scoped middleware for in scopes.
-    $routes->registerMiddleware('csrf', new CsrfProtectionMiddleware([
-        'httpOnly' => true,
-    ]));
+  //  $routes->registerMiddleware('csrf', new CsrfProtectionMiddleware([
+  //      'httpOnly' => true,
+   // ])
+//);
 
     /*
      * Apply a middleware to the current route scope.
      * Requires middleware to be registered through `Application::routes()` with `registerMiddleware()`
      */
-    $routes->applyMiddleware('csrf');
+  //  $routes->applyMiddleware('csrf');
 
     /*
      * Here, we are connecting '/' (base path) to a controller called 'Pages',

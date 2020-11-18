@@ -19,10 +19,12 @@ class ProductsController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Users','Files'],
-        ];
-        $products = $this->paginate($this->Products);
+      //  $this->paginate = [
+      //      'contain' => ['Users','Files'],
+      //  ];
+      //  $products = $this->paginate($this->Products);
+        $this->viewBuilder()->setLayout('productsSpa');
+        $products = $this->Products->find('all');
 
         $this->set(compact('products'));
     }
@@ -48,7 +50,7 @@ class ProductsController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+   /* public function add()
     {
         $product = $this->Products->newEntity();
         if ($this->request->is('post')) {
@@ -65,7 +67,7 @@ class ProductsController extends AppController
         $features = $this->Products->Features->find('list', ['limit' => 200]);
         $files = $this->Products->Files->find('list', ['limit' => 200]);
         $this->set(compact('product', 'users', 'features','files'));
-    }
+    }*/
 
     /**
      * Edit method
@@ -76,7 +78,7 @@ class ProductsController extends AppController
      */
 
 
-    public function edit($id = null)
+   /* public function edit($id = null)
     {
         $product = $this->Products->get($id, [
             'contain' => ['Features'],
@@ -94,7 +96,7 @@ class ProductsController extends AppController
         $features = $this->Products->Features->find('list', ['limit' => 200]);
         $files = $this->Products->Files->find('list', ['limit' => 200]);
         $this->set(compact('product', 'users', 'features','files'));
-    }
+    }*/
 
     /**
      * Delete method
@@ -103,7 +105,7 @@ class ProductsController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+   /* public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $product = $this->Products->get($id);
@@ -114,9 +116,9 @@ class ProductsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }
+    }*/
 
-    public function findProductNames(){
+    /*public function findProductNames(){
         if ($this->request->is('ajax')) {
 
             $this->autoRender = false;
@@ -131,9 +133,9 @@ class ProductsController extends AppController
             }
             echo json_encode($resultArr);
         }
-    }
+    }*/
 
-    public function isAuthorized($user)
+    /*public function isAuthorized($user)
     {
         if($user['role']== 'admin' || $user['role']== 'user'){
             return true;
@@ -141,11 +143,11 @@ class ProductsController extends AppController
             return false;
     
         }
-    }
+    }*/
 
-    public function initialize()
+    /*public function initialize()
     {
         parent::initialize();
        // $this->Auth->allow(['findProductNames']);
-    }
+    }*/
 }
