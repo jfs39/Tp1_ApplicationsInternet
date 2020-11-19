@@ -20,11 +20,9 @@ class ProductsController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Users','Files'],
+            'contain' => ['Users'],
         ];
         $products = $this->paginate($this->Products);
-       // $this->viewBuilder()->setLayout('productsSpa');
-       // $products = $this->Products->find('all');
 
         $this->set(compact('products'));
     }
@@ -39,7 +37,7 @@ class ProductsController extends AppController
     public function view($id = null)
     {
         $product = $this->Products->get($id, [
-            'contain' => ['Users', 'Features','Files'],
+            'contain' => ['Users', 'Features', 'Files', 'Products_title_translation', 'Products_product_description_translation', 'Products_product_name_translation', 'I18n'],
         ]);
 
         $this->set('product', $product);
@@ -76,8 +74,6 @@ class ProductsController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-
-
     public function edit($id = null)
     {
         $product = $this->Products->get($id, [
@@ -135,19 +131,9 @@ class ProductsController extends AppController
         }
     }
 
-  /*  public function isAuthorized($user)
-    {
-        if($user['role']== 'admin' || $user['role']== 'user'){
-            return true;
-        } else {
-            return false;
-    
-        }
-    }*/
-
     public function initialize()
     {
         parent::initialize();
-       // $this->Auth->allow(['findProductNames']);
+        $this->Auth->allow(['findProductNames']);
     }
 }

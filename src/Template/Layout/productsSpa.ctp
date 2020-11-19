@@ -31,7 +31,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         echo $this->Html->css([
             'base.css',
             'style.css',
-//            'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css',
+            'dummy.css',
+            'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css',
             'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
         ]);
         ?>
@@ -42,7 +43,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?php
         echo $this->Html->script([
             'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
-//            'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+            'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
             'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
                 ], ['block' => 'scriptLibraries']
         );
@@ -58,7 +59,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <div class="top-bar-section">
 
                 <ul class="right">
-                    <li><?= $this->Html->link(__('Add product (Autocomplete)'), ['controller' => 'admin/Products', 'action' => 'add']) ?></li>
+                    <li><?= $this->Html->link(__('Add product (Admin only)'), ['controller' => 'admin/Products', 'action' => 'add']) ?></li>
                     <li><?= $this->Html->link(__('Add feature'), ['controller' => 'Features', 'action' => 'add']) ?></li>
                     <li><?= $this->Html->link(__('Monopage'), ['controller' => 'Products', 'action' => 'index']) ?></li>                    <?php
                     $loguser = $this->request->getSession()->read('Auth.User');

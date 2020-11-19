@@ -1,7 +1,7 @@
 (function ($) {
     // Get the path to action from CakePHP
     var autoCompleteSource = urlToAutocompleteAction;
-    $('#autocomplete').autocomplete({
+    $('#product_name').autocomplete({
         source: autoCompleteSource,        
         minLength: 1
     });

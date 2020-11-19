@@ -4,20 +4,19 @@
  * @var \App\Model\Entity\Feature $feature
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Feature'), ['action' => 'edit', $feature->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Feature'), ['action' => 'delete', $feature->id], ['confirm' => __('Are you sure you want to delete # {0}?', $feature->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Features'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Feature'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Product'), ['controller' => 'Products', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
+  <?php $this->extend('../Layout/TwitterBootstrap/dashboard'); ?>
+
+<?php $this->start('tb_actions'); ?>
+<li class="nav-item"><?= $this->Html->link(__('List Features'), ['action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('New Product'), ['controller' => 'Products', 'action' => 'add'], ['class' => 'nav-link']) ?> </li>
+<li class="nav-item"><?= $this->Html->link(__('Log Out'), ['controller' => 'Users', 'action' => 'logout'], ['class' => 'nav-link']) ?></li>
+<?php $this->end(); ?>
+<?php $this->assign('tb_sidebar', $this->fetch('tb_actions')); ?>
+
 <div class="features view large-9 medium-8 columns content">
     <h3><?= h($feature->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table table-striped">
         <tr>
             <th scope="row"><?= __('Feature Name') ?></th>
             <td><?= h($feature->feature_name) ?></td>
@@ -30,15 +29,16 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($feature->id) ?></td>
         </tr>
+    
+    <tr scope="row">
+        <th><?= __('Feature Details') ?></th>
+        <td><?= $this->Text->autoParagraph(h($feature->feature_details)); ?></td>
+</tr>
     </table>
-    <div class="row">
-        <h4><?= __('Feature Details') ?></h4>
-        <?= $this->Text->autoParagraph(h($feature->feature_details)); ?>
-    </div>
     <div class="related">
         <h4><?= __('Related Products') ?></h4>
         <?php if (!empty($feature->products)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table cellpadding="0" cellspacing="0" class="table table-striped">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Product Name') ?></th>

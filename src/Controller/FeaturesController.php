@@ -24,6 +24,12 @@ class FeaturesController extends AppController
         $this->set(compact('features'));
     }
 
+    public function initialize()
+    {
+        parent::initialize();
+      //  $this->viewBuilder()->setLayout('default');
+    }
+
     /**
      * View method
      *
@@ -36,7 +42,6 @@ class FeaturesController extends AppController
         $feature = $this->Features->get($id, [
             'contain' => ['Products'],
         ]);
-
         $this->set('feature', $feature);
     }
 

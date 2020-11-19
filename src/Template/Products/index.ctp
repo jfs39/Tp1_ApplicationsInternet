@@ -6,6 +6,15 @@ $user = $this->Session->read('Auth.User');
 if(empty($user)){
     $user['id']= 1;
 }
+
+$urlToProductAutocompletedemoJson = $this->Url->build([
+    "controller" => "Products",
+    "action" => "findProductNames",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToProductAutocompletedemoJson . '";', ['block' => true]);
+echo $this->Html->script('Products/add-edit/productsAutoComplete', ['block' => 'scriptBottom']);
+
 ?>
         <div class="container">
             <div class="row">

@@ -4,22 +4,20 @@
  * @var \App\Model\Entity\Product $product
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Product'), ['action' => 'edit', $product->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Product'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Products'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Product'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Features'), ['controller' => 'Features', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Feature'), ['controller' => 'Features', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
+  
+  <?php $this->extend('../../Layout/TwitterBootstrap/dashboard'); ?>
+
+<?php $this->start('tb_actions'); ?>
+<li class="nav-item"><?= $this->Html->link(__('List Products'), ['controller'=> 'Products','action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add'], ['class' => 'nav-link']) ?> </li>
+<li><?= $this->Html->link(__('Log Out'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
+<?php $this->end(); ?>
+<?php $this->assign('tb_sidebar', $this->fetch('tb_actions')); ?>
+
 <div class="products view large-9 medium-8 columns content">
     <h3><?= h($product->id) ?></h3>
-    <table class="vertical-table">
+    <table class="table table-striped">
         <tr>
             <th scope="row"><?= __('Product Name') ?></th>
             <td><?= h($product->product_name) ?></td>
@@ -36,15 +34,16 @@
             <th scope="row"><?= __('Price') ?></th>
             <td><?= $this->Number->format($product->price) ?></td>
         </tr>
+   
+        <tr>
+        <th scope="row"><?= __('Product Description') ?></th>
+        <td><?= $this->Text->autoParagraph(h($product->product_description)); ?></td>
+        </tr>
+    <tr>
+        <th scope="row"><?= __('Other Details') ?></th>
+        <td><?= $this->Text->autoParagraph(h($product->other_details)); ?></td>
+    </tr>
     </table>
-    <div class="row">
-        <h4><?= __('Product Description') ?></h4>
-        <?= $this->Text->autoParagraph(h($product->product_description)); ?>
-    </div>
-    <div class="row">
-        <h4><?= __('Other Details') ?></h4>
-        <?= $this->Text->autoParagraph(h($product->other_details)); ?>
-    </div>
     <div class="related">
         <h4><?= __('Related Files') ?></h4>
         <?php if (!empty($product->files)): ?>
@@ -65,7 +64,7 @@
     <div class="related">
         <h4><?= __('Related Features') ?></h4>
         <?php if (!empty($product->features)): ?>
-        <table cellpadding="0" cellspacing="0">
+        <table cellpadding="0" cellspacing="0" class="table table-striped">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Feature Name') ?></th>

@@ -9909,3 +9909,726 @@ Request URL: /admin/features
 Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/admin/products/add
 
 
+2020-11-18 17:17:05 Error: [Cake\View\Exception\MissingTemplateException] Template file "Admin\Products\add.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Admin\\Products\\add.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(888): Cake\View\View->_getViewFileName('Admin\\Products\\...')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\ProductsController))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#17 {main}
+Request URL: /admin/products/add
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/admin/users/login?redirect=%2Fadmin%2Fproducts%2Fadd
+
+
+2020-11-18 17:37:29 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'product_name' doesn't have a default value (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\Product), Array)
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Product), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Controller\Admin\ProductsController.php(56): Cake\ORM\Table->save(Object(App\Model\Entity\Product))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\Admin\ProductsController->add()
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\ProductsController))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#31 {main}
+Request URL: /admin/products/add
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/admin/products/add
+
+
+2020-11-18 17:40:39 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:37)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(37): PDOStatement->execute(NULL)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(342): Cake\Database\Log\LoggingStatement->execute()
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(345): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(2136): Cake\Database\Query->execute()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(2028): Cake\ORM\Table->_insert(Object(App\Model\Entity\Product), Array)
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(1941): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Product), Object(ArrayObject))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(1646): Cake\ORM\Table->Cake\ORM\{closure}()
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(746): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(1647): Cake\Database\Connection->transactional(Object(Closure))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(1942): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Controller\Admin\ProductsController.php(56): Cake\ORM\Table->save(Object(App\Model\Entity\Product))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\Admin\ProductsController->add()
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\Admin\ProductsController))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#23 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#24 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#25 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#26 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#30 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#31 {main}
+Request URL: /admin/products/add
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/admin/products/add
+
+
+2020-11-18 17:41:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Admin could not be found. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Admin',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /admin
+
+
+2020-11-18 18:58:56 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\..\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\..\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\..\\..\\...')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\add.ctp(15): Cake\View\View->extend('../../Layout/Tw...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /features/add
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/
+
+
+2020-11-18 18:59:17 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\..\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\..\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\..\\..\\...')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\add.ctp(15): Cake\View\View->extend('../../Layout/Tw...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /features/add
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/
+
+
+2020-11-18 18:59:18 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\..\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\..\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\..\\..\\...')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\add.ctp(15): Cake\View\View->extend('../../Layout/Tw...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /features/add
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/
+
+
+2020-11-18 20:14:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Features could not be found. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Features',
+  'plugin' => false,
+  'prefix' => 'admin',
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /admin/features/add
+
+
+2020-11-18 20:15:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Features could not be found. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Features',
+  'plugin' => false,
+  'prefix' => 'admin',
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /admin/features/add
+
+
+2020-11-18 20:16:50 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\..\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\..\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\..\\..\\...')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\add.ctp(15): Cake\View\View->extend('../../Layout/Tw...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /features/add
+
+
+2020-11-19 06:01:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /css/dummy.css
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/
+
+
+2020-11-19 06:01:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php:105)
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#15 {main}
+Request URL: /css/dummy.css
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/
+
+
+2020-11-19 16:48:27 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 16:49:35 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 16:49:36 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 16:49:39 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 16:50:21 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 16:55:21 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 16:57:46 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 17:01:11 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 17:37:21 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 17:37:25 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 17:38:03 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+
+2020-11-19 17:40:19 Error: [Cake\View\Exception\MissingTemplateException] Template file "Features\pdf\..\Layout\TwitterBootstrap\dashboard.ctp" is missing. (C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php:1605)
+Exception Attributes: array (
+  'file' => 'Features\\pdf\\..\\Layout\\TwitterBootstrap\\dashboard.ctp',
+)
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1132): Cake\View\View->_getViewFileName('Features\\pdf\\.....')
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\src\Template\Features\pdf\view.ctp(7): Cake\View\View->extend('../Layout/Twitt...')
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1435): include('C:\\Program File...')
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(1393): Cake\View\View->_evaluate('C:\\Program File...', Array)
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\View\View.php(892): Cake\View\View->_render('C:\\Program File...')
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\friendsofcake\cakepdf\src\View\PdfView.php(107): Cake\View\View->render(NULL, NULL)
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Controller\Controller.php(791): CakePdf\View\PdfView->render(NULL, NULL)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(126): Cake\Controller\Controller->render()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\FeaturesController))
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(164): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#19 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\webroot\index.php(40): Cake\Http\Server->run()
+#22 {main}
+Request URL: /features/view/7.pdf
+Referer URL: http://localhost/Tp1_JeanFrancoisSergerie/features
+
+

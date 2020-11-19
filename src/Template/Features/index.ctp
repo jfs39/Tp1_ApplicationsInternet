@@ -4,19 +4,18 @@
  * @var \App\Model\Entity\Feature[]|\Cake\Collection\CollectionInterface $features
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-<ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Product'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Features'), ['controller' => 'Features', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Feature'), ['controller' => 'Features', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
+  <?php $this->extend('../Layout/TwitterBootstrap/dashboard'); ?>
+
+  <?php $this->start('tb_actions'); ?>
+<li class="nav-item"><?= $this->Html->link(__('List Features'), ['action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('New Product'), ['controller' => 'Products', 'action' => 'add'], ['class' => 'nav-link']) ?> </li>
+<li class="nav-item"><?= $this->Html->link(__('Log Out'), ['controller' => 'Users', 'action' => 'logout'], ['class' => 'nav-link']) ?></li>
+<?php $this->end(); ?>
+<?php $this->assign('tb_sidebar', $this->fetch('tb_actions')); ?>
 <div class="features index large-9 medium-8 columns content">
     <h3><?= __('Features') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" class="table table-striped">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -32,7 +31,7 @@
                 <td><?= h($feature->feature_name) ?></td>
                 <td><?= h($feature->feature_data_type) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $feature->id]) ?>
+                    <?= $this->Html->link(__('View (pdf)'), ['action' => 'view', $feature->id . '.pdf']) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $feature->id]) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $feature->id], ['confirm' => __('Are you sure you want to delete # {0}?', $feature->id)]) ?>
                 </td>

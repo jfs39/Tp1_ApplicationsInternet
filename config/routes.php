@@ -33,7 +33,7 @@ Router::prefix('admin', function (RouteBuilder $routes) {
     $routes->fallbacks(DashedRoute::class);
 });
 
-Router::extensions(['json','xml']);
+Router::extensions(['json','xml','pdf']);
 
 /*
  * The default class to use for all routes

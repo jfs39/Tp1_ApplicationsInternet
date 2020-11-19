@@ -1,0 +1,190 @@
+2020-11-18 16:59:06 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('Products')
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2020-11-18 16:59:46 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('products')
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2020-11-18 17:01:27 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(691): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(288): Cake\ORM\Table->getPrimaryKey()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('banana')
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#15 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#16 {main}
+
+
+2020-11-18 17:02:29 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('Products')
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2020-11-18 17:06:15 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('Products')
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2020-11-18 17:06:48 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('Products')
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2020-11-18 17:11:56 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('Products')
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2020-11-18 17:14:34 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('products')
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+
+2020-11-18 17:16:26 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php on line 93
+Stack Trace:
+#0 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver.php(93): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(105): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(44): Cake\Database\Driver\Mysql->connect()
+#3 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(62): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(51): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(41): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Database\Connection.php(399): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\ORM\Table.php(565): Cake\Database\Connection->getSchemaCollection()
+#8 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(292): Cake\ORM\Table->getSchema()
+#9 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(142): Bake\Shell\Task\TemplateTask->_loadController()
+#10 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(531): Bake\Shell\Task\TemplateTask->main('Products')
+#11 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\Shell.php(524): Cake\Console\Shell->runCommand(Array, false, Array)
+#12 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#13 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#14 C:\Program Files\Ampps\www\Tp1_JeanFrancoisSergerie\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#15 {main}
+
+

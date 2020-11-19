@@ -8,19 +8,18 @@ echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['b
 echo $this->Html->script('Products/index', ['block' => 'scriptBottom']);
 
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Product'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Features'), ['controller' => 'Features', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Feature'), ['controller' => 'Features', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
+<?php $this->extend('../../Layout/TwitterBootstrap/dashboard'); ?>
+<?php $this->start('tb_actions'); ?>
+<li class="nav-item"><?= $this->Html->link(__('List Products'), ['action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add'], ['class' => 'nav-link']) ?> </li>
+<li><?= $this->Html->link(__('Log Out'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
+<?php $this->end(); ?>
+<?php $this->assign('tb_sidebar', $this->fetch('tb_actions')); ?>
+
 <div class="products index large-9 medium-8 columns content">
     <h3><?= __('Products') ?></h3>
-    <table cellpadding="0" cellspacing="0">
+    <table cellpadding="0" cellspacing="0" class="table table-striped">
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
@@ -50,9 +49,9 @@ echo $this->Html->script('Products/index', ['block' => 'scriptBottom']);
                         ?>
                     </td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $product->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $product->id],[ 'class' => 'btn btn-secondary']) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $product->id],[ 'class' => 'btn btn-secondary']) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $product->id], ['confirm' => __('Are you sure you want to delete # {0}?', $product->id), 'class' => 'btn btn-danger']) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

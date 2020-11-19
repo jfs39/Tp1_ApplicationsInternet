@@ -4,14 +4,15 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Product'), ['controller' => 'Products', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
+<?php $this->extend('../../Layout/TwitterBootstrap/dashboard'); ?>
+<?php $this->start('tb_actions'); ?>
+<li class="nav-item"><?= $this->Html->link(__('List Products'), ['controller'=> 'Products','action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index'], ['class' => 'nav-link']) ?></li>
+<li class="nav-item"><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add'], ['class' => 'nav-link']) ?> </li>
+<li><?= $this->Html->link(__('Log Out'), ['controller' => 'Users', 'action' => 'logout']) ?></li>
+<?php $this->end(); ?>
+<?php $this->assign('tb_sidebar', $this->fetch('tb_actions')); ?>
+
 <div class="users form large-9 medium-8 columns content">
     <?= $this->Form->create($user) ?>
     <fieldset>

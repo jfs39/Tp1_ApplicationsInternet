@@ -118,7 +118,7 @@ class ProductsController extends AppController
         return $this->redirect(['action' => 'index']);
     }*/
 
-    /*public function findProductNames(){
+    public function findProductNames(){
         if ($this->request->is('ajax')) {
 
             $this->autoRender = false;
@@ -133,7 +133,7 @@ class ProductsController extends AppController
             }
             echo json_encode($resultArr);
         }
-    }*/
+    }
 
     /*public function isAuthorized($user)
     {
@@ -145,9 +145,9 @@ class ProductsController extends AppController
         }
     }*/
 
-    /*public function initialize()
+    public function initialize()
     {
         parent::initialize();
-       // $this->Auth->allow(['findProductNames']);
-    }*/
+        $this->Auth->allow(['findProductNames']);
+    }
 }
