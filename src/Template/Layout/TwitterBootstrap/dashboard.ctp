@@ -7,6 +7,13 @@ $this->Html->css('BootstrapUI.dashboard', ['block' => true]);
 $this->prepend('tb_body_attrs', ' class="' . implode(' ', [$this->request->getParam('controller'), $this->request->getParam('action')]) . '" ');
 $this->start('tb_body_start');
 ?>
+    <?php
+        echo $this->Html->script([
+            'https://code.jquery.com/jquery-1.12.4.js',
+            'https://code.jquery.com/ui/1.12.1/jquery-ui.js'
+                ], ['block' => 'scriptLibraries']
+        );
+        ?>
 <body <?= $this->fetch('tb_body_attrs') ?>>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
 <?= $this->Html->link(Configure::read('App.title'), '/', ['class' => 'navbar-brand col-sm-3 col-md-2 mr-0']) ?>
@@ -42,4 +49,7 @@ $this->start('tb_body_start');
                 $this->end();
 
                 $this->append('content', '</main></div></div>');
-                echo $this->fetch('content');
+                echo $this->fetch('content');?>
+                <?= $this->fetch('scriptLibraries') ?>
+                <?= $this->fetch('script'); ?>
+                <?= $this->fetch('scriptBottom') ?> 

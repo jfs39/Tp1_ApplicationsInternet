@@ -4,13 +4,22 @@
  * @var \App\Model\Entity\Feature $feature
  */
 
-$urlToLinkedListFilter = $this->Url->build([
+/*$urlToLinkedListFilter = $this->Url->build([
     "controller" => "Features",
     "action" => "getByDataType",
     "_ext" => "json"
         ]);
 echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
 echo $this->Html->script('Features/add_edit', ['block' => 'scriptBottom']);
+*/
+
+$urlToProductAutocompletedemoJson = $this->Url->build([
+    "controller" => "Features",
+    "action" => "findFeatureNames",
+    "_ext" => "json"
+        ]);
+        echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToProductAutocompletedemoJson . '";', ['block' => true]);
+        echo $this->Html->script('Features/add-edit/featuresAutoComplete', ['block' => 'scriptBottom']);
 ?>
   <?php $this->extend('../Layout/TwitterBootstrap/dashboard'); ?>
 
@@ -29,7 +38,7 @@ echo $this->Html->script('Features/add_edit', ['block' => 'scriptBottom']);
             //echo $this->Form->control('feature_data_type',['options' => $data_Types]);/*,['options' => $data_Types]*/
             echo $this->Form->control('feature_data_type');/*,['options' => $data_Types]*/
             //echo $this->Form->control('feature_name', ['options' => [__('Please select a data type first')]]);
-            echo $this->Form->control('feature_name');
+            echo $this->Form->control('feature_name', ['type' => 'text', 'id'=> 'autocomplete']);
             echo $this->Form->control('feature_details');
             echo $this->Form->control('products._ids', ['options' => $products]);
         ?>

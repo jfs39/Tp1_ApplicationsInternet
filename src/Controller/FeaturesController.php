@@ -20,14 +20,14 @@ class FeaturesController extends AppController
     public function index()
     {
         $features = $this->paginate($this->Features);
-
+        $this->viewBuilder()->setLayout('default');
         $this->set(compact('features'));
     }
 
     public function initialize()
     {
         parent::initialize();
-      //  $this->viewBuilder()->setLayout('default');
+        
     }
 
     /**
@@ -123,6 +123,23 @@ class FeaturesController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function findFeatureNames(){
+        if ($this->request->is('ajax')) {
+
+            $this->autoRender = false;
+            $name = $this->request->query['term'];
+            $results = $this->Features->find('all', array(
+                'conditions' => array('Features.feature_name LIKE ' => '%' . $name . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result) {
+                $resultArr[] = array('label' => $result['feature_name'], 'value' => $result['feature_name']);
+            }
+            echo json_encode($resultArr);
+        }
     }
 
     public function isAuthorized($user)
