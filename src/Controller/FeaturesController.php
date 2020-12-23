@@ -74,10 +74,7 @@ class FeaturesController extends AppController
             $this->Flash->error(__('The feature could not be saved. Please, try again.'));
         }
         $products = $this->Features->Products->find('list', ['limit' => 200]);
-        $colors = $this->Features->Colors->find('list', ['limit' => 200]);
-        $shapes = $this->Features->Shapes->find('list', ['limit' => 200]);
-        $data_Types = ['Colors', 'Shapes'];
-        $this->set(compact('feature', 'products','colors','shapes','data_Types'));
+        $this->set(compact('feature', 'products'));
     }
 
     /**

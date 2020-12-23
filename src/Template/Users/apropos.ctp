@@ -27,6 +27,11 @@
 <p>Pour les listes liées, celles-ci ne semblent pas fonctionner, si vous voulez, vous pouvez consulter mon code afin d'y trouver les morceaux de code que j'ai implémenté<br/>
  pour tenter de faire fonctionner le tout.</p>
 
+ <p>L'interface avec les jetons JWT est sur mon interface monopage de produits et sont liés à ma page index.js dans le dossier Products de webroot/js</p>
+ 
+  <p>Mon interface monopage en entier se sert des jetons JWT maintenant. Elle requiert que l'utilisateur se connecte afin de pouvoir effectivement utiliser les fonctionnalités CRUD
+  <br/> de mon application web.</p>
+
 <img src="/Tp1_JeanFrancoisSergerie/img/BD.png"/>
 <br/>
 <img src="/Tp1_JeanFrancoisSergerie/img/bddCourante.png"/>

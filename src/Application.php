@@ -34,6 +34,8 @@ class Application extends BaseApplication
      */
     public function bootstrap()
     {
+        $this->addPlugin('ADmad/JwtAuth');
+
         $this->addPlugin('CakePdf');
 
         $this->addPlugin('BootstrapUI');

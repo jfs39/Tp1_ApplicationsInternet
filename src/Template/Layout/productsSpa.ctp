@@ -32,7 +32,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             'base.css',
             'style.css',
             'dummy.css',
-            'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css',
+          //  'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css',
             'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'
         ]);
         ?>
@@ -43,7 +43,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?php
         echo $this->Html->script([
             'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
-            'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+          //  'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
             'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
                 ], ['block' => 'scriptLibraries']
         );
@@ -53,7 +53,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <nav class="top-bar expanded" data-topbar role="navigation">
             <ul class="title-area large-3 medium-4 columns">
                 <li class="name">
-                    <h1><?= $this->Html->link(__('CakePHP CMS Tuto') . ' v0.6.2', '/'); ?><?php // echo " - " . $this->fetch('title');          ?></h1>
+                <h1><?= $this->Html->link(__('Gestion de produits') . ' v0.7.1', '/'); ?><?php // echo " - " . $this->fetch('title');          ?></h1>
                 </li>
             </ul>
             <div class="top-bar-section">
@@ -61,7 +61,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                 <ul class="right">
                     <li><?= $this->Html->link(__('Add product (Admin only)'), ['controller' => 'admin/Products', 'action' => 'add']) ?></li>
                     <li><?= $this->Html->link(__('Add feature'), ['controller' => 'Features', 'action' => 'add']) ?></li>
-                    <li><?= $this->Html->link(__('Monopage'), ['controller' => 'Products', 'action' => 'index']) ?></li>                    <?php
+                    <li><?= $this->Html->link(__('Monopage'), ['controller' => 'Products', 'action' => 'index']) ?></li>
+                    <li><?= $this->Html->link(__('About me'), ['controller' => 'Users', 'action' => 'apropos']) ?></li>                     <?php
                     $loguser = $this->request->getSession()->read('Auth.User');
                     if ($loguser) :
                         ?>

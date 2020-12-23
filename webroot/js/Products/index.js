@@ -1,123 +1,192 @@
+var app = angular.module('app', []);
+var urlToRestApiUsers = urlToRestApi.substring(0, urlToRestApi.lastIndexOf('/') + 1) + 'users';
 
-// Update the products data list
-function getProducts() {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi,
-        dataType: "json",
-        success:
-                function (data) {
-                    var productsTable = $('#productData');
-                    productsTable.empty();
-                    $.each(data.products, function (key, value)
-                    {
-                        var editDeleteButtons = '</td><td>' +
-                                '<a href="javascript:void(0);" class="btn btn-warning" rowID="' +
-                                    value.id + 
-                                    '" data-type="edit" data-toggle="modal" data-target="#modalProductsAddEdit">' + 
-                                    'edit</a>' +
-                                '<a href="javascript:void(0);" class="btn btn-danger"' +
-                                    'onclick="return confirm(\'Are you sure to delete data?\') ?' + 
-                                    'productAction(\'delete\', \'' + 
-                                    value.id + 
-                                    '\') : false;">delete</a>' +
-                                '</td></tr>';
-                        productsTable.append('<tr><td>' + value.id + '</td><td>' + value.product_name + '</td><td>' + value.product_description +'</td><td>'+ value.price + '</td><td>'+ value.other_details + editDeleteButtons);
- 
-                    });
+app.controller('ProductCRUDCtrl', ['$scope', 'ProductCRUDService', function ($scope, ProductCRUDService) {
 
-                }
-    });
-}
+        $scope.updateProduct = function () {
+            ProductCRUDService.updateProduct(product)
+                    .then(function success(response) {
+                        $scope.message = 'Product data updated!';
+                        $scope.errorMessage = '';
+                        $scope.getAllProducts();
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Error updating product!';
+                                $scope.message = '';
+                            });
+        }
 
- /* Function takes a jquery form
- and converts it to a JSON dictionary */
-function convertFormToJSON(form) {
-    var array = $(form).serializeArray();
-    var json = {};
+        $scope.getProduct = function (id) {
+            ProductCRUDService.getProduct(id)
+                    .then(function success(response) {
+                        $scope.product = response.data.product;
+                        $scope.product.id = id;
+                        $scope.message = '';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.message = '';
+                                if (response.status === 404) {
+                                    $scope.errorMessage = 'Product not found!';
+                                } else {
+                                    $scope.errorMessage = "Error getting product!";
+                                }
+                            });
+        }
 
-    $.each(array, function () {
-        json[this.name] = this.value || '';
-    });
-
-    return json;
-}
-
-
-function productAction(type, id) {
-    id = (typeof id == "undefined") ? '' : id;
-    var statusArr = {add: "added", edit: "updated", delete: "deleted"};
-    var requestType = '';
-    var productData = '';
-    var ajaxUrl = urlToRestApi;
-    frmElement = $("#modalProductsAddEdit");
-    if (type == 'add') {
-        requestType = 'POST';
-        productData = convertFormToJSON(frmElement.find('form'));
-    } else if (type == 'edit') {
-        requestType = 'PUT';
-        ajaxUrl = ajaxUrl + "/" + id;
-        productData = convertFormToJSON(frmElement.find('form'));
-    } else {
-        requestType = 'DELETE';
-        ajaxUrl = ajaxUrl + "/" + id;
-    }
-    frmElement.find('.statusMsg').html('');
-    $.ajax({
-        type: requestType,
-        url: ajaxUrl,
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(productData),
-        success: function (msg) {
-            if (msg) {
-                frmElement.find('.statusMsg').html('<p class="alert alert-success">Product data has been ' + statusArr[type] + ' successfully.</p>');
-                getProducts();
-                if (type == 'add') {
-                    frmElement.find('form')[0].reset();
-                }
+        $scope.addProduct = function () {
+            if ($scope.product != null && $scope.product.product_name) {
+                ProductCRUDService.addProduct($scope.product.product_name, $scope.product.product_description, $scope.product.price, $scope.product.other_details)
+                        .then(function success(response) {
+                            $scope.message = 'Product added!';
+                            $scope.errorMessage = '';
+                            $scope.getAllProducts();
+                        },
+                                function error(response) {
+                                    $scope.errorMessage = 'Error adding product!';
+                                    $scope.message = '';
+                                });
             } else {
-                frmElement.find('.statusMsg').html('<p class="alert alert-danger">Some problem occurred, please try again.</p>');
+                $scope.errorMessage = 'Please enter a name!';
+                $scope.message = '';
             }
         }
-    });
-}
 
-// Fill the product's data in the edit form TODO REVENIR ICI SI BUG OCCURE
-function editProduct(id) {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi + "/" + id,
-        dataType: 'JSON',
-       // data: 'action_type=data&id=' + id,
-        success: function (data) {
-            $('#id').val(data.product.id);
-            $('#product_name').val(data.product.product_name);
-            $('#product_description').val(data.product.product_description);
-            $('#price').val(data.product.price);
-            $('#other_details').val(data.product.other_details);
+        $scope.deleteProduct = function (id) {
+            ProductCRUDService.deleteProduct(id)
+                    .then(function success(response) {
+                        $scope.message = 'Product deleted!';
+                        $scope.product = null;
+                        $scope.errorMessage = '';
+                        $scope.getAllProducts();
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Error deleting product!';
+                                $scope.message = '';
+                            })
         }
-    });
-}
 
-// Actions on modal show and hidden events
-$(function () {
-    $('#modalProductsAddEdit').on('show.bs.modal', function (e) {
-        var type = $(e.relatedTarget).attr('data-type');
-        var productFunc = "productAction('add');";
-        $('.modal-title').html('Add new product');
-        if (type == 'edit') {
-            var rowId = $(e.relatedTarget).attr('rowID');
-            productFunc = "productAction('edit',"+rowId+");";
-            $('.modal-title').html('Edit product');
-            editProduct(rowId);
+        $scope.getAllProducts = function () {
+            ProductCRUDService.getAllProducts()
+                    .then(function success(response) {
+                        $scope.products = response.data.products;
+                        $scope.message = '';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.message = '';
+                                $scope.errorMessage = 'Error getting products!';
+                            });
         }
-        $('#productSubmit').attr("onclick", productFunc);
-    });
+        $scope.login = function () {
+            if ($scope.user != null && $scope.user.username) {
+                ProductCRUDService.login($scope.user)
+                        .then(function success(response) {
+                            $scope.message = $scope.user.username + ' en session!';
+                            $scope.errorMessage = '';
+                            localStorage.setItem('token', response.data.data.token);
+                            localStorage.setItem('user_id', response.data.data.id);
+                        },
+                                function error(response) {
+                                    $scope.errorMessage = 'Nom d\'utilisateur ou mot de passe invalide...';
+                                    $scope.message = '';
+                                });
+            } else {
+                $scope.errorMessage = 'Entrez un nom d\'utilisateur s.v.p.';
+                $scope.message = '';
+            }
 
-    $('#modalProductsAddEdit').on('hidden.bs.modal', function () {
-        $('#productSubmit').attr("onclick", "");
-        $(this).find('form')[0].reset();
-        $(this).find('.statusMsg').html('');
-    });
-});
+        }
+        $scope.logout = function () {
+            localStorage.setItem('token', "no token");
+            localStorage.setItem('user', "no user");
+            $scope.message = '';
+            $scope.errorMessage = 'Utilisateur déconnecté!';
+        }
+        $scope.changePassword = function () {
+            ProductCRUDService.changePassword($scope.user.password)
+                    .then(function success(response) {
+                        $scope.message = 'Mot de passe mis à jour!';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Mot de passe inchangé!';
+                                $scope.message = '';
+                            });
+        }
+    }]);
+
+app.service('ProductCRUDService', ['$http', function ($http) {
+
+        this.getProduct = function getProduct(productId) {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi + '/' + productId,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
+            });
+        }
+
+        this.addProduct = function addProduct(product_name, product_description, price, other_details) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApi,
+                data: {product_name: product_name, product_description: product_description, price: price, other_details: other_details ,user_id: 1},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
+            });
+        }
+
+        this.deleteProduct = function deleteProduct(id) {
+            return $http({
+                method: 'DELETE',
+                url: urlToRestApi + '/' + id,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
+            })
+        }
+
+        this.updateProduct = function updateProduct(id, product_name, product_description,price,other_details) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApi + '/' + id,
+                data: {product_name: product_name, product_description: product_description, price: price, other_details:other_details, user_id: 1},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
+            })
+        }
+
+        this.getAllProducts = function getAllProducts() {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")}
+            });
+        }
+        this.login = function login(user) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApiUsers + '/token',
+                data: {username: user.username, password: user.password},
+                headers: {'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'}
+            });
+        }
+        this.changePassword = function changePassword(password) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApiUsers + '/' + localStorage.getItem("user_id"),
+                data: {password: password},
+                headers: {'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem("token")
+                }
+            })
+        }
+    }]);

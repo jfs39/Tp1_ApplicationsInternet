@@ -1,32 +1,70 @@
 <?php
-$urlToRestApi = $this->Url->build('/api/products', true);
+echo $this->Html->script([
+    'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'
+        ], ['block' => 'scriptLibraries']
+);
+$urlToRestApi = $this->Url->build([
+    'prefix' => 'api',
+    'controller' => 'Products'], true);
 echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
 echo $this->Html->script('Products/index', ['block' => 'scriptBottom']);
-$user = $this->Session->read('Auth.User');
-if(empty($user)){
-    $user['id']= 1;
-}
-
-$urlToProductAutocompletedemoJson = $this->Url->build([
-    "controller" => "Products",
-    "action" => "findProductNames",
-    "_ext" => "json"
-        ]);
-echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToProductAutocompletedemoJson . '";', ['block' => true]);
-echo $this->Html->script('Products/add-edit/productsAutoComplete', ['block' => 'scriptBottom']);
-
 ?>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 head">
-                    <h5>Products</h5>
-                    <!-- Add link -->
-                    <div class="float-right">
-                        <a href="javascript:void(0);" class="btn btn-success" data-type="add" data-toggle="modal" data-target="#modalProductsAddEdit"><i class="plus"></i> New Product</a>
-                    </div>
-                </div>
-                <div class="statusMsg"></div>
-                <table class="table table-striped table-bordered">
+
+<?php
+use Cake\Utility\Security;
+//echo Security::salt();
+?>
+
+
+<div  ng-app="app" ng-controller="ProductCRUDCtrl">
+<table>
+        <tr>
+            <td width="200">User name (username):</td>
+            <td><input type="text" id="username" ng-model="user.username" /></td>
+        </tr>
+        <tr>
+            <td width="200">Mot de passe (password):</td>
+            <td><input type="text" id="password" ng-model="user.password" /></td>
+        </tr>
+        <tr>
+        <a ng-click="login(user)">[Connexion] </a>
+        <a ng-click="logout()">[Déconnexion] </a>
+        <a ng-click="changePassword(user.password)">[Changer le mot de passe]</a>              
+        </tr>
+    </table>
+    <table>
+        
+            <td><input type="hidden" id="id" ng-model="product.id" /></td>
+   
+        <tr>
+            <td width="100">Name :</td>
+            <td><input type="text" id="name" ng-model="product.product_name" /></td>
+        </tr>
+        <tr>
+            <td width="100">Details:</td>
+            <td><input type="text" id="details" ng-model="product.product_description" /></td>
+        </tr>
+        <tr>
+            <td width="100">Price:</td>
+            <td><input type="number" id="datatype" ng-model="product.price" /></td>
+        </tr>
+        <tr>
+            <td width="100">Other details:</td>
+            <td><input type="text" id="datatype" ng-model="product.other_details" /></td>
+        </tr>
+    </table>
+    <br /> <br /> 
+    
+    <button ng-click="updateProduct(product.id, product.product_name, product.product_description, product.price, product.other_details)">Update Product</button> 
+    <button ng-click="addProduct(product.product_name, product.product_description, product.price, product.other_details)">Add Product</button>
+
+    <br /> <br />
+    <p style="color: green">{{message}}</p>
+    <p style="color: red">{{errorMessage}}</p>
+
+    <br />
+    <br /> 
+    <table class="table table-striped table-bordered">
                     <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
@@ -36,82 +74,31 @@ echo $this->Html->script('Products/add-edit/productsAutoComplete', ['block' => '
                             <th>Other details</th>
                         </tr>
                     </thead>
-                    <tbody id="productData">
-                        <?php if (!empty($products)) {
-                            foreach ($products as $row) { ?>
-                                <tr>
-                                    <td><?php echo '#' . $row['id']; ?></td>
-                                    <td><?php echo $row['product_name']; ?></td>
-                                    <td><?php echo $row['product_description']; ?></td>
-                                    <td><?php echo $row['price']; ?></td>
-                                    <td><?php echo $row['other_details']; ?></td>
-
-                                    <td>
-                                        <a href="javascript:void(0);" class="btn btn-warning" 
-                                           rowID="<?php echo $row['id']; ?>" data-type="edit" 
-                                           data-toggle="modal" data-target="#modalProductsAddEdit">
-                                            edit
-                                        </a>
-                                        <a href="javascript:void(0);" class="btn btn-danger" 
-                                           onclick="return confirm('Are you sure to delete data?') ? 
-                                               productAction('delete', '<?php echo $row['id']; ?>') : false;">
-                                            delete
-                                        </a>
+                    <tbody ng-Init="getAllProducts()">
+                        
+                                <tr ng-repeat="product in products | filter:search">
+                                    <td class="text-align-center">
+                                    {{product.id}}
                                     </td>
+                                    <td>
+                                    {{product.product_name}}
+                                    </td>
+                                    <td>
+                                    {{product.product_description}} 
+                                    </td>
+                                    <td>
+                                    {{product.price}}
+                                    </td>
+                                    <td>
+                                    {{product.other_details}}
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-warning btn-sm" ng-click="getProduct(product.id)">Edit</button>
+                                    </td>
+                                    <td><button type="button" class="btn btn-warning btn-sm" ng-click="deleteProduct(product.id)">Delete</button></td>
                                 </tr>
-                            <?php }
-                        } else { ?>
-                            <tr><td colspan="5">No product found...</td></tr>
-<?php } ?>
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-
-
-        <!-- Modal Add and Edit Form -->
-        <div class="modal fade" id="modalProductsAddEdit" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Add Product</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-                        <div class="statusMsg"></div>
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="product_name">Product name</label>
-                                <input type="text" class="form-control" name="product_name" id="product_name" placeholder="Enter the product name">
-                            </div>
-                            <div class="form-group">
-                                <label for="product_description">Product Description</label>
-                                <input type="text" class="form-control" name="product_description" id="product_description" placeholder="Enter the product description">
-                            </div>
-                            <div class="form-group">
-                                <label for="price">Product Price</label>
-                                <input type="number" class="form-control" name="price" id="price">
-                            </div>
-                            <div class="form-group">
-                                <label for="other_details">Other product details</label>
-                                <input type="text" class="form-control" name="other_details" id="other_details" placeholder="Enter other details here">
-                            </div>
-                            <input type="hidden" class="form-control" name="id" id="id"/>
-                            <input type="hidden" class="form-control" name="user_id" id="user_id" value="<? echo $user['id']?>"/>
-                        </form>
-                    </div>
-
-                    <!-- Modal Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success" id="productSubmit">SUBMIT</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+                
+ <!--   <pre ng-show='products'>{{products | json }}</pre>-->
+</div>

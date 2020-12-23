@@ -24,7 +24,7 @@ class ColorsTableTest extends TestCase
      */
     public $fixtures = [
         'app.Colors',
-        'app.Features',
+        'app.Featurespecial',
     ];
 
     /**
@@ -67,16 +67,6 @@ class ColorsTableTest extends TestCase
      * @return void
      */
     public function testValidationDefault()
-    {
-        $this->markTestIncomplete('Not implemented yet.');
-    }
-
-    /**
-     * Test buildRules method
-     *
-     * @return void
-     */
-    public function testBuildRules()
     {
         $this->markTestIncomplete('Not implemented yet.');
     }

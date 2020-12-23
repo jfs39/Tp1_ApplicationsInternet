@@ -21,7 +21,7 @@ class ColorsControllerTest extends TestCase
      */
     public $fixtures = [
         'app.Colors',
-        'app.Features',
+        'app.Featurespecial',
     ];
 
     /**

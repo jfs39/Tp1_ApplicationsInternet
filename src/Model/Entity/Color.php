@@ -8,9 +8,10 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property string $color_name
- * @property int|null $feature_id
+ * @property string $color_description
+ * @property string $color_type
  *
- * @property \App\Model\Entity\Feature $feature
+ * @property \App\Model\Entity\Featurespecial[] $featurespecial
  */
 class Color extends Entity
 {
@@ -25,7 +26,8 @@ class Color extends Entity
      */
     protected $_accessible = [
         'color_name' => true,
-        'feature_id' => true,
-        'feature' => true,
+        'color_description' => true,
+        'color_type' => true,
+        'featurespecial' => true,
     ];
 }
